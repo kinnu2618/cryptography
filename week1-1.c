@@ -4,18 +4,15 @@
 
 int main() {
     char str[] = "Hello World";
-    char str2[11]; // For AND with 127
+    char str2[11]; 
     char str3[11]; 
-    char decrypted[11]; // For decrypted XOR result
+    char decrypted[11]; 
     int i, len;
 
-    // Calculate the length of the input string
     len = strlen(str);
 
-    // Print the entered text
     printf("Entered text: %s\n", str);
 
-    // Perform AND operation with 127
     printf("AND with 127: ");
     for (i = 0; i < len; i++) {
         str2[i] = str[i] & 127;
@@ -23,7 +20,6 @@ int main() {
     }
     printf("\n");
 
-    // Perform XOR operation with 127
     printf("XOR with 127: ");
     for (i = 0; i < len; i++) {
         str3[i] = str[i] ^ 127;
@@ -31,7 +27,6 @@ int main() {
     }
     printf("\n");
 
-    // Decrypt the XOR result
     printf("Decrypted text: ");
     for (i = 0; i < len; i++) {
         decrypted[i] = str3[i] ^ 127;
